@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;700;800&family=Press+Start+2P&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.menu {
+  margin-top: 100px;
+  padding: 40px;
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  outline: 1px solid;
+  outline-color: rgba(166, 70, 30, 0.8);
+  transition-duration: 500ms;
+}
+
+.menu:hover {
+  box-shadow: 0 0 40px 0 rgba(255, 48, 32, 0.58);
+}
+
+form {
+  max-width: 700px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form fieldset {
+  width: 50%;
+}
+
+form fieldset .box {
+  padding: 30px;
+  padding-bottom: 15px;
+  height: 242px / 2;
+  min-height: 100px;
+}
+
+form .btn-ready {
+  background-color: #ed9c2b;
+  width: 200px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 30px;
+}
+
+form .btn-ready p {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+form .btn-ready:hover {
+  border: 10px solid #000;
+}
+
+.burger {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.burger img {
+  width: 40vw;
+  max-width: 400px;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 400;
+}
