@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+    <div class="container menu">
+        <form>
+            <h1>Собери свой бутер!</h1><br>
+            <fieldset>
+                <div class="box">
+                    <h2>Размер:</h2>
+                    <p><select name="size">
+                        <option value="big"><p>большой</p></option>
+                        <option value="small"><p>маленький</p></option>
+                    </select></p><br>
+                </div>
+                <div class="box">
+                    <h2>Начинка:</h2>
+                    <p><select name="buter-content">
+                            <option value="cheese"><p>Сыр</p></option>
+                            <option value="salat"><p>Салат</p></option>
+                            <option value="potato"><p>Картоха</p></option>
+                       </select>
+                    </p><br>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="box">
+                    <h2>Приправа</h2>
+                    <p><input type="radio" name="buter-flavoring" value="y">Да</p><br>
+                    <p><input type="radio" name="buter-flavoring" value="n" checked>Нет</p><br>
+                </div>
+                <div class="box">
+                    <h2>Мазик</h2>
+                    <p><input type="radio" name="buter-mazyk" value="y">Да</p><br>
+                    <p><input type="radio" name="buter-mazyk" value="n" checked>Нет</p><br>
+                </div>
+            </fieldset>
+            
+            <button class="btn-ready" type="submit"><p>Готово!</p></button>
+        </form>
+        <div class="burger">
+            <img src="img/burger.png" alt="картинка с пиксельным бутером">
+        </div>
+    </div>
+    <script defer src="main.js"></script>
+</body>
+</html>

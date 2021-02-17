@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;700;800&family=Press+Start+2P&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #523637;
+}
+
+.head {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+
+.head .title {
+  width: 70%;
+}
+
+.btn-cart {
+  height: 40px;
+  width: 100px;
+  background-color: #e1dc6b;
+  color: #523637;
+  border-radius: 20px;
+  transition-duration: 500ms;
+}
+
+.btn-cart:hover {
+  transform: scale(1.1);
+}
+
+.btn-cart:focus {
+  outline-style: none;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  margin-top: 50px;
+}
+
+.product-item {
+  width: 220px;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f2b9cc;
+  transition: 500ms;
+}
+
+.product-item .product-item-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.product-item .product-item-boxButton {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.product-item .product-item-boxButton button {
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.product-item .product-item-boxButton button:hover {
+  background-color: #a1ae25;
+  color: #523637;
+}
+
+.product-item:hover {
+  box-shadow: 0 0 10px rgba(82, 54, 55, 0.8);
+}
+
+.product-item:focus {
+  outline-style: none;
+}
+
+.product-item h3 {
+  width: inherit;
+  line-height: 35px;
+}
+
+.product-item p {
+  width: inherit;
+  line-height: 25px;
+}
