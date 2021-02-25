@@ -248,3 +248,4 @@ ModelManifest.xml
 *.config
 *.min.css
 compilerconfig.json
+*.default
