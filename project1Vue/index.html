@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="head-line">
+                <div class="head container">
+                    <div class="title"></div>
+                    <form action="#" class="search-space">
+                        <input v-model.lazy="textInput" placeholder="Search" type="text" class="search-field">
+                        <button @click.stop.prevent="FilterGoods(textInput); notSearchAction = true" class="btn-search" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <button class="btn-cart" @click="isVisibleCart = !isVisibleCart">Cart</button>
+                </div>
+            </div>
+            <div :class="{visible: isVisibleCart, invisible: !isVisibleCart}" 
+                           class="cart-window container">
+                <div class="product-item-cart" v-for="el of productsInCart" :key="el.id">
+                    <img class="product-item-img" :src="imgCatalog" alt="el.name">
+                    <h3>{{ el.name }}</h3>
+                    <p>{{ el.price }}</p>
+                    <div class="count">
+                        <button class="countMinus" @click="deleteOne(el)"> Убрать один</button>
+                        <p>{{ el.count }}</p>
+                        <button class="countPlus" @click="addOne(el)">Прибавить один</button>
+                    </div>   
+                    <button class="delete-btn" @click="deleteItem(el)">Убрать из корзины</button>
+                </div>
+                <p :style="{'display': displayValue}">Корзина пуста</p>
+                <p :style="{'display': displayValueMirror}">Итоговая стоимость: {{ sum }}</p>
+                <button class="btn-clearCart" :style="{'display': displayValueMirror}" @click="clear()">Очистить корзину</button>
+            </div>
+        </header>
+        <main class="container">
+            <div class="products" :class="{invisible: notSearchAction}">
+                <div class="product-item" v-for="el of products" :key="el.id_product">
+                    <img class="product-item-img" :src="imgCatalog" :alt="el.product_name">
+                    <h3>{{ el.product_name }}</h3>
+                    <p>{{ el.price }}</p>
+                    <div class="product-item-boxButton">
+                    <button class="buy-btn" @click="addProduct(el)">Купить</button></div>  <!--на кнопке было id-->
+                </div>
+            </div>
+            <div class="products" :class="{invisible: !notSearchAction}">
+                <div class="product-item" v-for="el of productsInSearch" :key="el.id_product">
+                    <img class="product-item-img" :src="imgCatalog" :alt="el.product_name">
+                    <h3>{{ el.product_name }}</h3>
+                    <p>{{ el.price }}</p>
+                    <div class="product-item-boxButton">
+                    <button class="buy-btn" @click="addProduct(el)">Купить</button></div>  <!--на кнопке было id-->
+                </div>
+            </div>
+            <button :class="{invisible: !notSearchAction, btnReturnCatalog: notSearchAction}" @click="notSearchAction = false; productsInSearch = []">Вернуться к каталогу</button>
+        </main>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script defer src="main.js"></script>
+</body>
+</html>
